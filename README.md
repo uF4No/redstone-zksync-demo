@@ -1,6 +1,12 @@
-# zkSync Hardhat project
+# zkSync Redstone demo
 
 This project was scaffolded with [zksync-cli](https://github.com/matter-labs/zksync-cli).
+
+## Try it
+
+- Install deps with `yarn`
+- Run the [local-setup](#local-testing) in a separate terminal
+- Run `yarn test` to test it locally.
 
 ## Project structure
 
@@ -11,9 +17,9 @@ This project was scaffolded with [zksync-cli](https://github.com/matter-labs/zks
 
 ## Commands
 
+- `yarn` install dependencies
 - `yarn hardhat compile` will compile the contracts.
-- `yarn run deploy` will execute the deployment script `/deploy/deploy-greeter.ts`. Requires [environment variable setup](#environment-variables).
-- `yarn run greet` will execute the script `/deploy/use-greeter.ts` which interacts with the Greeter contract deployed.
+- `yarn run deploy` will execute the deployment script `/deploy/deploy.ts`. Requires [environment variable setup](#environment-variables).
 - `yarn test`: run tests. **Check test requirements below.**
 
 Both `yarn run deploy` and `yarn run greet` are configured in the `package.json` file and run `yarn hardhat deploy-zksync`.
