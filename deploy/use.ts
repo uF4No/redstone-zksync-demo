@@ -39,7 +39,7 @@ export default async function (hre: HardhatRuntimeEnvironment) {
   // Connecting all provider's prices (consumes more GAS)
   const wrappedContract = WrapperBuilder.wrap(contract).usingDataService(
     {
-      dataServiceId: "redstone-main-demo",
+      dataServiceId: "redstone-rapid-demo",
       uniqueSignersCount: 1,
       dataFeeds: ["ETH"],
     },

@@ -26,15 +26,19 @@ describe("PriceChecker", function () {
 
     const wrapped = WrapperBuilder.wrap(PriceChecker).usingDataService(
       {
-        dataServiceId: "redstone-main-demo",
+        dataServiceId: "redstone-rapid-demo",
         uniqueSignersCount: 1,
         dataFeeds: ["ETH"],
       },
       ["https://d33trozg86ya9x.cloudfront.net"]
     );
 
-    console.log("wrapped :>> ", wrapped);
+    // console.log("wrapped :>> ", wrapped);
 
-    expect(await wrapped.getLatestEthPrice({ gasLimit: 200000 })).to.not.eq("");
+    const res = await wrapped.getLatestEthPrice({});
+
+    console.log(`ETH price is ${ethers.utils.formatUnits(res.toString(), 8)}`);
+
+    expect(await wrapped.getLatestEthPrice({})).to.not.eq("");
   });
 });
